@@ -1,0 +1,19 @@
+{
+	"name": "ftp motordata",
+	"type": "Microsoft.Synapse/workspaces/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FtpServer",
+		"typeProperties": {
+			"host": "ftp://5.44.137.84/ESStatistikListeModtag/",
+			"port": "",
+			"enableSsl": false,
+			"enableServerCertificateValidation": false,
+			"authenticationType": "Anonymous"
+		},
+		"connectVia": {
+			"referenceName": "AutoResolveIntegrationRuntime",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

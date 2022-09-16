@@ -1,0 +1,19 @@
+{
+	"name": "xmlfileunzipped",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "data",
+				"fileSystem": "motordata"
+			}
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

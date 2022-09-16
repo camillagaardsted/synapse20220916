@@ -1,0 +1,19 @@
+{
+	"name": "motorzipfile",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ftp motordata",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "FtpServerLocation",
+				"fileName": "ESStatistikListeModtag-20220911-222128.zip",
+				"folderPath": "ESStatistikListeModtag"
+			}
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

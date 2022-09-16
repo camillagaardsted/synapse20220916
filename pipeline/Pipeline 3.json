@@ -1,0 +1,100 @@
+{
+	"name": "Pipeline 3",
+	"properties": {
+		"activities": [
+			{
+				"name": "ForEach1",
+				"type": "ForEach",
+				"dependsOn": [],
+				"userProperties": [],
+				"typeProperties": {
+					"items": {
+						"value": "@variables('yearArray')",
+						"type": "Expression"
+					},
+					"isSequential": false,
+					"activities": [
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [],
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "year",
+								"value": {
+									"value": "@item()",
+									"type": "Expression"
+								}
+							}
+						},
+						{
+							"name": "Web1",
+							"type": "WebActivity",
+							"dependsOn": [
+								{
+									"activity": "Wait1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"timeout": "0.12:00:00",
+								"retry": 0,
+								"retryIntervalInSeconds": 30,
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"url": {
+									"value": "@concat('https://www.boxofficemojo.com/year/',variables('year'),'/?ref_=bo_yl_table_5')",
+									"type": "Expression"
+								},
+								"connectVia": {
+									"referenceName": "AutoResolveIntegrationRuntime",
+									"type": "IntegrationRuntimeReference"
+								},
+								"method": "GET"
+							}
+						},
+						{
+							"name": "Wait1",
+							"type": "Wait",
+							"dependsOn": [
+								{
+									"activity": "Set variable1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"userProperties": [],
+							"typeProperties": {
+								"waitTimeInSeconds": 3
+							}
+						}
+					]
+				}
+			}
+		],
+		"variables": {
+			"yearArray": {
+				"type": "Array",
+				"defaultValue": [
+					"2016",
+					"2017",
+					"2018",
+					"2019"
+				]
+			},
+			"year": {
+				"type": "String",
+				"defaultValue": "2017"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2022-09-15T09:43:29Z"
+	},
+	"type": "Microsoft.Synapse/workspaces/pipelines"
+}

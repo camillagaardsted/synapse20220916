@@ -1,0 +1,22 @@
+{
+	"name": "zipfildatalake",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Binary",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "ESStatistikListeModtag-20220911-222128.zip",
+				"fileSystem": "motordata"
+			},
+			"compression": {
+				"type": "ZipDeflate"
+			}
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

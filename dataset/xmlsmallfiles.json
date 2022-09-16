@@ -1,0 +1,19 @@
+{
+	"name": "xmlsmallfiles",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureDataLakeStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Xml",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "smallfiles",
+				"fileSystem": "motordata"
+			}
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
