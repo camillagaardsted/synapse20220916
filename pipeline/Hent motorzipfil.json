@@ -33,7 +33,8 @@
 							"type": "AzureBlobFSWriteSettings"
 						}
 					},
-					"enableStaging": false
+					"enableStaging": false,
+					"dataIntegrationUnits": 32
 				},
 				"inputs": [
 					{
