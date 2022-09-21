@@ -1,5 +1,5 @@
 {
-	"name": "Pipeline 4",
+	"name": "Hent motorzipfil",
 	"properties": {
 		"activities": [
 			{
@@ -37,7 +37,7 @@
 				},
 				"inputs": [
 					{
-						"referenceName": "motorzipfile",
+						"referenceName": "ftpmotorzipfile",
 						"type": "DatasetReference"
 					}
 				],

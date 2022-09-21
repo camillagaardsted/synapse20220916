@@ -1,5 +1,5 @@
 {
-	"name": "motorzipfile",
+	"name": "ftpmotorzipfile",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "ftp motordata",
