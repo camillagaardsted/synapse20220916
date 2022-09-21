@@ -1,0 +1,18 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactory20220921"
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://datalakesu20220919.dfs.core.windows.net/"
+		},
+		"ftp motordata_properties_typeProperties_host": {
+			"value": "ftp://5.44.137.84/ESStatistikListeModtag/"
+		}
+	}
+}
