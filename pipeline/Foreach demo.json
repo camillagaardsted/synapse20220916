@@ -52,7 +52,7 @@
 									"type": "Expression"
 								},
 								"connectVia": {
-									"referenceName": "AutoResolveIntegrationRuntime",
+									"referenceName": "integrationRuntime",
 									"type": "IntegrationRuntimeReference"
 								},
 								"method": "GET"
