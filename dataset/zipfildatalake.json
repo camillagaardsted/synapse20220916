@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobFSLocation",
-				"fileName": "ESStatistikListeModtag-20220911-222128.zip",
+				"folderPath": "demo",
 				"fileSystem": "motordata"
 			},
 			"compression": {
